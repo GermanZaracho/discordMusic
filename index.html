@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="shortcut icon" href="/img/flaticon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000">
+    <title>White Fangs</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>My Songs</h1>
+        </div>
+    </nav>
+
+    <main id="app">
+
+        <div class="theImportantOnes">
+
+            <div class="info">
+
+                <input id="inicio" list="discordCommand" name="discordCommand" type="text"
+                    placeholder="Chose the command">
+                <datalist id="discordCommand">
+                    <option value="+p"></option>
+                    <option value="=music p"></option>
+                    <option value="#p"></option>
+                </datalist>
+
+                <p id="linkVideo">You're going to see your link here</p>
+
+            </div>
+
+            <div class="notSoImportantOnes">
+
+                <button class="button" @click="randomNumber" type="button"> Random Copy </button>
+                <!-- <button class="button" onclick=""> Modificar Comandos </button> -->
+                <button class="button" @click="mySongs"> See Links </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div v-if="songs === true">
+
+            <div class="notSoImportantOnes">
+
+                <button class="button" @click="deleteNote" type="button">Delete Link</button>
+                <button class="button" @click="noMoreSongs" type="button">Hide Links</button>
+
+            </div>
+
+            <ul class="listCollection">
+
+                <li :class="{upperNote:isCase}" v-for="item in shuffleArray">
+                    <div class="newLink">
+                        <input class="newLinkInput" type="checkbox" v-model="item.check" id="formalCheck">
+                        <label class="newLinkLabel green" for="formalCheck">{{item.nombre}}</label>
+                        <label class="newLinkLabel " for="formalCheck">{{item.note}}</label>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="">
+            <form class="enterSong">
+                <div class="enter">
+                    <label for="ingresar-url">Link</label>
+                    <input id="ingresar-url" class="materialize-textarea" name="ingresar-link" v-model="note" type="url"
+                        placeholder="Enter Link" class=""></input>
+
+
+                </div>
+                <div class="enter">
+                    <label for="ingresar-nombre">Song Name</label>
+                    <input id="ingresar-nombre" class="materialize-textarea" name="ingresar-descripcion"
+                        v-model="nombre" type="url" placeholder="Enter Song Name" class=""></input>
+                </div>
+            </form>
+        </div>
+
+        <div class="notSoImportantOnes">
+            <button class="button" @click="guardarNotas" type="button">Add</button>
+        </div>
+
+
+
+    </main>
+    <footer></footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

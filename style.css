@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Erica+One);
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.newNoteInput {
+    opacity: 1 !important;
+    position: relative !important;
+    pointer-events: auto !important;
+}
+
+label {
+    color: black;
+    font-weight: 600;
+}
+
+.button,
+#btn-save {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    will-change: box-shadow, transform;
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
+    height: 48px;
+    padding: 0 32px;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    /* max-width: 18vw; */
+    margin: auto;
+    font-weight: 600;
+}
+
+.listCollection,
+.newNote {
+    margin: 10px;
+}
+
+.logo {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.theImportantOnes {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.notSoImportantOnes {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 35px;
+}
+
+#inicio,
+#discordCommand {
+    margin: 0px 15px;
+}
+
+#inicio {
+    max-width: 250px;
+    text-align: center;
+    margin:auto;
+}
+
+.enterSong {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+.enter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.enter #ingresar-url {
+    margin-left: 70px;
+}
+
+.enter #ingresar-nombre {
+    margin-left: 8px;
+}
+
+.upperNote {
+    list-style: none;
+}
+
+.green {
+    color: green;
+}
+
+#linkVideo {
+    font-weight: 400;
+}
